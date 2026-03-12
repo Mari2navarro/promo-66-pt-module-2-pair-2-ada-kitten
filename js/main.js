@@ -1,7 +1,10 @@
 "use strict";
 
+// LISTA QUERY-SELECTOR 
 const list = document.querySelector(".js-list")
-
+const plus = document.querySelector(".plus")
+const newform = document.querySelector(".js-newform")
+const cancel = document.querySelector(".js-cancel")
 const kittenOne = `<li class="card">
                     <article>
                         <img class="card_img" src="https://api-pw.dev.adalab.es/gato-siames.webp"
@@ -37,10 +40,32 @@ const kittenThree = `<li class="card">
                     </p>
                 </li>`;
 
-//list.innerHTML = kittenOne + kittenTwo + kittenThree;
-
-//list.innerHTML += kittenOne;
-//list.innerHTML += kittenTwo;
-//list.innerHTML += kittenThree;
-
 list.innerHTML = `${kittenOne}${kittenTwo}${kittenThree}`;
+
+
+//LISTA EVENTS 
+
+plus.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    addRemove();
+
+
+})
+
+cancel.addEventListener("click", (ev) => {
+    ev.preventDefault();
+    addRemove();
+
+
+})
+
+//LISTA FUNCTION
+function addRemove() {
+    if (newform.classList.contains("collapsed")) {
+        newform.classList.remove("collapsed");
+    }
+    else {
+        newform.classList.add("collapsed");
+    }
+
+}
