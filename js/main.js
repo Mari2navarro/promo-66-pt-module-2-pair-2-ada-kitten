@@ -53,7 +53,6 @@ const kittenTwoDesc = "Produce fascinación y curiosidad. Exótico, raro, bello,
 const kittenThreeDesc = "Tienen la cabeza cuadrada y los ojos simétricos, por lo que su bella mirada se ha convertido en una de sus señas de identidad. Sus ojos son grandes y las orejas resultan largas y en punta."
 
 
-
 //LISTA FUNCTION
 function addRemove() {
     if (newform.classList.contains("collapsed")) {
@@ -128,3 +127,5 @@ const kittenData = {
 
     }
 }
+
+const kittenDataList = [kittenOne, kittenTwo, kittenThree];
